@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercice 17</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="conteneur">
+    <h1>Formulaire de réservation</h1>
+    <h6>(* = Champs obligatoire)</h6>
+    <form action="#" enctype="multipart/form-data" method="GET">
+        <ul>
+            <li><label for="nom">Nom* :</label><input type="text" name="nom" id="nom" placeholder="Votre nom"
+                    class="normal"></li>
+            <li><label for="prenom">Prénom :</label><input type="text" name="prenom" id="prenom"
+                    placeholder="Votre prénom" class="normal"></li>
+            <li><label for="tel">Téléphone :</label> <input type="text" name="tel" id="tel" placeholder="0123456789" class="normal">
+            </li>
+            <li><label for="email">Email* :</label><input type="text" name="email" id="email" placeholder="xxx@yyy.zz"
+                    class="normal"></li>
+            <li><label for="choix">Votre réservation est pour :</label>
+                <section id="paiementMain">
+                    <section id="paiementSelect">
+                        <select name="choix" id="choix1">
+                            <option value="Demi-journée">Demi-journée</option>
+                            <option value="Journée">Journée</option>
+                            <option value="Repas">Repas</option>
+                        </select>
+
+                        <select name="choix" id="choix2">
+                            <option value="Journée">Journée</option>
+                            <option value="Demi-journée">Demi-journée</option>
+                            <option value="Repas">Repas</option>
+                        </select>
+
+                        <select name="choix" id="choix3">
+                            <option value="Repas">Repas</option>
+                            <option value="Demi-journée">Demi-journée</option>
+                            <option value="Journée">Journée</option>
+                        </select>
+                    </section>
+                    <section id="paiementInput">
+                        <div class="paiementInput">
+                            <input type="text" name="QT" id="QT1" placeholder="Quantité">
+                            <input type="text" name="QT" id="QT2" placeholder="Quantité">
+                            <input type="text" name="QT" id="QT3" placeholder="Quantité">
+                        </div>
+                        <div class="paiementInput" id="positionInput">
+                            <input type="text" name="HT" id="HT1" placeholder="Sous-total HT" disabled>
+                            <input type="text" name="HT" id="HT2" placeholder="Sous-total HT" disabled>
+                            <input type="text" name="HT" id="HT3" placeholder="Sous-total HT" disabled>
+                        </div>
+                    </section>
+                    
+            </li>
+            </section>
+            <section id="prixTotal">
+            <label for="HTmain">Sous-total HT: </label>
+            <input type="text" name="HTmain" id="HTmain" placeholder="Sous-total HT" disabled>
+            <p id="euros1">euros</p>
+            <label for="TTC">Total TTC (TVA 20%): </label>
+            <p id="euros2">euros</p>
+            <input type="text" name="TTC" id="TTC" placeholder="Total TTC" disabled>
+        </section>
+        <section id="conditionGénérale">
+        <label for="conditions" id="conditionLabel">J'accepte les conditions générales *</label>
+        <input type="checkbox" name="conditions" id="conditions" class="normal">
+    </section>
+        <section>
+            <label for="button"></label>
+            <button id="vérif">Vérifier avant envoi</button>
+            <button id="imprimer">Imprimer</button>
+            <button id="effacer">Réinitialiser</button>
+            <button id="envoie">Envoyer ma commande</button>
+        </section>
+        </ul>
+    </form>
+</div>
+</body>
+
+</html>
